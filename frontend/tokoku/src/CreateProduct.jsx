@@ -1,7 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function CreateProductComponent() {
+  const navigate = useNavigate();
   const [productName, setProductName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
@@ -10,7 +12,7 @@ export default function CreateProductComponent() {
   const createProduct = async (formData) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/tokoku-tugas-lab/product/create-product",
+        "http://https://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/create-product",
         formData,
         {
           headers: {
@@ -35,6 +37,7 @@ export default function CreateProductComponent() {
     formData.append("image", image);
 
     createProduct(formData);
+    navigate("/");
   };
 
   return (

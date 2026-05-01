@@ -19,7 +19,7 @@ export default function UpdateProductComponent() {
   async function fetchProduct() {
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/v1/tokoku-tugas-lab/product/get-product/${id}`,
+        `http://https://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/get-product/${id}`,
       );
 
       console.log(response.data);
@@ -38,7 +38,7 @@ export default function UpdateProductComponent() {
   const editProduct = async (formData) => {
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/v1/tokoku-tugas-lab/product/update-product/${id}`,
+        `http://https://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/update-product/${id}`,
         formData,
         {
           headers: {

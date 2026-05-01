@@ -6,7 +6,7 @@ export default function Hero() {
   async function fetchProducts() {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/tokoku-tugas-lab/product/get-all-products",
+        "http://https://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/get-all-products",
       );
       setProducts(response.data.products);
     } catch (error) {

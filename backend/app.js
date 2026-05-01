@@ -6,6 +6,7 @@ import { connectDB } from "./database/connectDB.js";
 import { productRoutes } from "./routes/productRoutes.js";
 import { v2 as cloudinary } from "cloudinary";
 import dns from "dns";
+import { authRoutes } from "./routes/authRoutes.js";
 dns.setServers(["1.1.1.1"]);
 
 cloudinary.config({
@@ -24,6 +25,8 @@ app.use(
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use("/api/v1/tokoku-tugas-lab/auth", authRoutes);
 app.use("/api/v1/tokoku-tugas-lab/product", productRoutes);
 
 const startServer = async () => {
