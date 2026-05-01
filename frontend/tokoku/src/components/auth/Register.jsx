@@ -82,7 +82,7 @@ export default function RegisterComponent() {
         <p className="text-center text-sm text-gray-600">
           Sudah punya akun?{" "}
           <Link
-            to="/login"
+            to="/auth/login"
             className="text-blue-500 hover:underline font-medium"
           >
             Login
