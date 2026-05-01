@@ -8,7 +8,7 @@ export default function ProductComponent() {
   async function fetchProducts() {
     try {
       const response = await axios.get(
-        "http://https://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/get-all-products",
+        "http://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/get-all-products",
       );
       setProducts(response.data.products);
     } catch (error) {
