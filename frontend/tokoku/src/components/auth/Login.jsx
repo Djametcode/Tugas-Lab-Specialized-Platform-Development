@@ -24,6 +24,9 @@ export default function LoginComponent() {
       localStorage.setItem("token", result.token);
 
       // redirect setelah login
+      window.gtag("event", "login_success", {
+        event_category: "User",
+      });
       navigate("/");
     } catch (error) {
       console.log(error);

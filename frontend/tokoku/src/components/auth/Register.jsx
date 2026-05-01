@@ -24,6 +24,10 @@ export default function RegisterComponent() {
         },
       );
 
+      window.gtag("event", "register_success", {
+        event_category: "User",
+      });
+
       alert("Registrasi berhasil, silakan login!");
       navigate("/auth/login");
     } catch (error) {

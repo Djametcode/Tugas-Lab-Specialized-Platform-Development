@@ -35,6 +35,10 @@ export default function CreateProductComponent() {
       formData.append("image", image);
 
       await createProduct(formData);
+
+      window.gtag("event", "create_product", {
+        event_category: "Product",
+      });
       navigate("/");
       window.location.reload();
     } catch (error) {
