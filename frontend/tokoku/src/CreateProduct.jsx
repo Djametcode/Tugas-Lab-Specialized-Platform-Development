@@ -23,7 +23,7 @@ export default function CreateProductComponent() {
 
       console.log("Product created successfully:", response.data);
     } catch (error) {
-      console.error("Error creating product:", error);
+      console.log(error);
     }
   };
 
