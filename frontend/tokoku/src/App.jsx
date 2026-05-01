@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className=" h-screen pl-[300px] pr-[300px]">
       <NavigationComponent />
-      {token ? <Outlet /> : <Navigate to="/login" replace />}
+      {token ? <Outlet /> : <Navigate to="/auth/login" replace />}
     </div>
   );
 }
