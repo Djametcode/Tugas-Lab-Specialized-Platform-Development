@@ -10,6 +10,8 @@ import Hero from "./components/Hero.jsx";
 import DetailProductComponent from "./DetailProduct.jsx";
 import UpdateProductComponent from "./EditProduct.jsx";
 import LoginComponent from "./components/auth/Login.jsx";
+import WrapperComponent from "./components/auth/Wrapper.jsx";
+import RegisterComponent from "./components/auth/Register.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,10 +21,6 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Hero />,
-      },
-      {
-        path: "login",
-        element: <LoginComponent />,
       },
       {
         path: "create-product",
@@ -39,6 +37,20 @@ const router = createBrowserRouter([
       {
         path: "update-product/:id",
         element: <UpdateProductComponent />,
+      },
+    ],
+  },
+  {
+    path: "/auth",
+    element: <WrapperComponent />,
+    children: [
+      {
+        path: "login",
+        element: <LoginComponent />,
+      },
+      {
+        path: "register",
+        element: <RegisterComponent />,
       },
     ],
   },
