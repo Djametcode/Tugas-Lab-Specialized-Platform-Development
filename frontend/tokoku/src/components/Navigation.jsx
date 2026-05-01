@@ -11,7 +11,7 @@ export default function NavigationComponent() {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/auth/login");
+    navigate("/");
     window.location.reload();
   };
 
