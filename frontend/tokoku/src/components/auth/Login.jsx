@@ -16,7 +16,7 @@ export default function LoginComponent() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/auth/login",
+        "https://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/auth/login",
         data,
       );
 

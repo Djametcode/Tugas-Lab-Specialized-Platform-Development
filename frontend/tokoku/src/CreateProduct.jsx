@@ -12,7 +12,7 @@ export default function CreateProductComponent() {
   const createProduct = async (formData) => {
     try {
       const response = await axios.post(
-        "http://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/create-product",
+        "https://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/create-product",
         formData,
         {
           headers: {

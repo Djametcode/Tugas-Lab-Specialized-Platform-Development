@@ -11,7 +11,7 @@ export default function DetailProductComponent() {
   async function fetchProduct() {
     try {
       const response = await axios.get(
-        `http://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/get-product/${id}`,
+        `https://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/get-product/${id}`,
       );
       console.log(response.data);
       setProduct(response.data.product);
@@ -23,7 +23,7 @@ export default function DetailProductComponent() {
   async function deleteProduct(id) {
     try {
       const response = await axios.delete(
-        `http://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/delete-product/${id}`,
+        `https://tugas-lab-specialized-platform.onrender.com/api/v1/tokoku-tugas-lab/product/delete-product/${id}`,
       );
 
       console.log(response);
